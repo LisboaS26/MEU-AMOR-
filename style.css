@@ -55,9 +55,11 @@ body{
 .phone{
   width:390px;
   height:850px;
+
   position:relative;
 
-  overflow:hidden; /* IMPORTANTE */
+  overflow-y:auto;   /* scroll dentro do celular */
+  overflow-x:hidden;
 
   background:linear-gradient(
     -45deg,
@@ -76,7 +78,6 @@ body{
     0 0 0 10px #000,
     0 0 60px rgba(0,0,0,0.7);
 }
-
 .phone::-webkit-scrollbar{
   width:0;
 }
