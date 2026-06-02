@@ -34,9 +34,15 @@ body{
   position:absolute;
   width:3px;
   height:3px;
+
   background:white;
   border-radius:50%;
-  opacity:0.8;
+  opacity:0.85;
+
+  box-shadow:
+    0 0 6px #ff2e63,
+    0 0 12px #ff2e63;
+
   animation:floatUp linear infinite;
 }
 
