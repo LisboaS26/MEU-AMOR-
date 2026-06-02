@@ -19,9 +19,8 @@ body{
 }
 
 .phone{
-  width:100%;
-  max-width:390px;
-  min-height:850px;
+  width:390px;
+  max-width:100%;
 
   background:#121212;
 
@@ -29,9 +28,8 @@ body{
 
   overflow:hidden;
 
-  box-shadow:
-    0 0 0 10px #000,
-    0 0 60px rgba(0,0,0,0.7);
+  display:flex;
+  flex-direction:column;
 }
 
 /* HERO */
@@ -111,6 +109,8 @@ button:hover{
 /* PLAYLIST */
 
 .playlist{
+  width:100%;
+
   padding:0 15px 50px;
 
   display:flex;
@@ -120,6 +120,8 @@ button:hover{
 }
 
 .song-card{
+  width:100%;
+
   background:#1c1c1c;
 
   border-radius:22px;
