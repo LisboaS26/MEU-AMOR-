@@ -57,3 +57,15 @@ function playOurSong(){
   playlistAudio.pause();
   ourSongAudio.play();
 }
+
+const music = document.getElementById("ourMusic");
+
+function toggleMusic(){
+
+  if(music.paused){
+    music.play();
+  } else {
+    music.pause();
+  }
+
+}
