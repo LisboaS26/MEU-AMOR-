@@ -64,9 +64,12 @@ function toggleMusic(){
 
   if(music.paused){
     music.play();
+    createStars();
   } else {
     music.pause();
   }
+
+}
 
 const starsContainer = document.querySelector(".stars");
 
