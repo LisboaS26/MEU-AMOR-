@@ -59,6 +59,7 @@ function playOurSong(){
 }
 
 const music = document.getElementById("ourMusic");
+const btn = document.getElementById("musicBtn");
 
 function toggleMusic(){
 
@@ -66,9 +67,10 @@ function toggleMusic(){
 
   if(music.paused){
     music.play();
-    createStars();
+    btn.innerHTML = "⏸ pausar música";
   } else {
     music.pause();
+    btn.innerHTML = "▶ tocar música";
   }
 
 }
