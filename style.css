@@ -21,8 +21,7 @@ body{
 }
 
 .phone{
-  width:100%;
-  max-width:390px;
+  width:390px;
   height:850px;
 
   background:#121212;
@@ -111,6 +110,8 @@ button:hover{
   margin-top:12px;
   color:#ff2e63;
   font-size:1.3rem;
+
+  line-height:1.5;
 }
 
 /* PLAYLIST */
@@ -125,6 +126,8 @@ button:hover{
 }
 
 .song-card{
+  width:100%;
+
   background:#1c1c1c;
 
   border-radius:22px;
@@ -152,6 +155,8 @@ button:hover{
 
 .song-info{
   flex:1;
+
+  min-width:0;
 }
 
 .song-info h3{
@@ -232,7 +237,8 @@ button:hover{
   }
 
   .phone{
-  width:390px;
+    width:100%;
+    height:100vh;
 
     border-radius:0;
   }
@@ -240,19 +246,4 @@ button:hover{
   .main-photo{
     height:240px;
   }
-}
-
-.hero,
-.counter,
-.playlist,
-.letter{
-  width:100%;
-}
-
-.song-card{
-  max-width:100%;
-}
-
-.phone *{
-  max-width:100%;
 }
