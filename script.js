@@ -82,10 +82,19 @@ function createStars() {
     star.classList.add("star");
 
     star.style.left = Math.random() * 100 + "vw";
-    star.style.top = Math.random() * 100 + "vh";
+
+    // ⭐ camada de profundidade
+    let size = Math.random();
+
+    if (size < 0.4) {
+      star.classList.add("near");   // perto (maior)
+    } else if (size < 0.8) {
+      star.classList.add("mid");    // meio
+    } else {
+      star.classList.add("far");    // longe (menor)
+    }
 
     star.style.animationDuration = (3 + Math.random() * 5) + "s";
-    star.style.opacity = Math.random();
 
     starsContainer.appendChild(star);
   }
