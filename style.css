@@ -67,7 +67,7 @@ h1{
 }
 
 button{
-  background:#ff2e63
+  background:#ff2e63;
 
   border:none;
 
@@ -93,7 +93,7 @@ button:hover{
 
 #timeTogether{
   margin-top:12px;
-  color:#ff2e63
+  color:#ff2e63;
   font-size:1.3rem;
 }
 
