@@ -232,8 +232,7 @@ button:hover{
   }
 
   .phone{
-    max-width:100%;
-    height:100vh;
+  width:390px;
 
     border-radius:0;
   }
@@ -241,4 +240,19 @@ button:hover{
   .main-photo{
     height:240px;
   }
+}
+
+.hero,
+.counter,
+.playlist,
+.letter{
+  width:100%;
+}
+
+.song-card{
+  max-width:100%;
+}
+
+.phone *{
+  max-width:100%;
 }
