@@ -65,8 +65,20 @@ const music = document.getElementById("ourMusic");
 const btn = document.getElementById("musicBtn");
 
 function toggleMusic(){
-  console.log("clicou no botão");
-  alert("funcionou");
+
+  const music = document.getElementById("ourMusic");
+  const btn = document.getElementById("musicBtn");
+
+  if(!music || !btn) return;
+
+  if(music.paused){
+    music.play();
+    btn.innerHTML = "⏸ pausar música";
+  } else {
+    music.pause();
+    btn.innerHTML = "▶ tocar música";
+  }
+
 }
 
 /* ⭐ ESTRELAS */
