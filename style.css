@@ -275,3 +275,45 @@ button:hover{
 
 }
 
+.photo-slider{
+  width:100%;
+
+  overflow:hidden;
+
+  margin-bottom:25px;
+
+  border-radius:20px;
+}
+
+.slider-track{
+  display:flex;
+
+  width:calc(250px * 8);
+
+  animation:scrollPhotos 30s linear infinite;
+}
+
+.slider-track img{
+  width:250px;
+  height:180px;
+
+  object-fit:cover;
+
+  margin-right:12px;
+
+  border-radius:18px;
+
+  flex-shrink:0;
+}
+
+@keyframes scrollPhotos{
+
+  0%{
+    transform:translateX(0);
+  }
+
+  100%{
+    transform:translateX(calc(-250px * 4));
+  }
+
+}
