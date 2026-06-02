@@ -20,16 +20,19 @@ body{
 
 .phone{
   width:390px;
-  max-width:100%;
+  height:850px;
 
   background:#121212;
 
   border-radius:40px;
 
-  overflow:hidden;
+  overflow-y:auto;
 
-  display:flex;
-  flex-direction:column;
+  overflow-x:hidden;
+
+  box-shadow:
+    0 0 0 10px #000,
+    0 0 60px rgba(0,0,0,0.7);
 }
 
 /* HERO */
@@ -41,12 +44,12 @@ body{
 
 .main-photo{
   width:100%;
-  height:260px;
+
+  height:220px;
 
   object-fit:cover;
-  object-position:center;
 
-  border-radius:25px;
+  border-radius:20px;
 
   display:block;
 
@@ -133,6 +136,8 @@ button:hover{
   gap:15px;
 
   align-items:center;
+
+  overflow:hidden;
 }
 
 .song-card img{
