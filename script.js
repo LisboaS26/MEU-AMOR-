@@ -1,3 +1,6 @@
+console.log("btn:", document.getElementById("musicBtn"));
+console.log("music:", document.getElementById("ourMusic"));
+
 function scrollToPlaylist(){
   window.scrollTo({
     top: window.innerHeight,
