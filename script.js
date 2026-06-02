@@ -62,6 +62,8 @@ const music = document.getElementById("ourMusic");
 
 function toggleMusic(){
 
+  if(!music) return;
+
   if(music.paused){
     music.play();
     createStars();
@@ -71,23 +73,7 @@ function toggleMusic(){
 
 }
 
-const starsContainer = document.querySelector(".stars");
-
-for (let i = 0; i < 80; i++) {
-  const star = document.createElement("div");
-  star.classList.add("star");
-
-  star.style.left = Math.random() * 100 + "vw";
-  star.style.top = Math.random() * 100 + "vh";
-
-  star.style.animationDuration = (3 + Math.random() * 5) + "s";
-  star.style.opacity = Math.random();
-
-  starsContainer.appendChild(star);
-}
-  
-}
-
+/* ⭐ ESTRELAS */
 const starsContainer = document.querySelector(".stars");
 
 function createStars() {
@@ -104,3 +90,4 @@ function createStars() {
     starsContainer.appendChild(star);
   }
 }
+  
