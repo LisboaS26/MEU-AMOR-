@@ -61,8 +61,6 @@ setInterval(updateCounter, 1000);
 
 updateCounter();
 
-let playlistAudio = new Audio("COLOQUE_LINK_DA_PLAYLIST_AQUI");
-let ourSongAudio = new Audio("COLOQUE_LINK_DA_MUSICA_AQUI");
 
 function playPlaylist(){
   ourSongAudio.pause();
