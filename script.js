@@ -113,3 +113,14 @@ function createStars() {
 window.addEventListener("load", () => {
   createStars();
 });
+
+music.addEventListener("timeupdate", () => {
+  if (!music.duration) return;
+
+  let percent = (music.currentTime / music.duration) * 100;
+  progressBar.value = percent;
+});
+
+progressBar.addEventListener("input", () => {
+  music.currentTime = (progressBar.value / 100) * music.duration;
+});
