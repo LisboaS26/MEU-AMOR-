@@ -82,26 +82,23 @@ function toggleMusic(){
 }
 
 /* ⭐ ESTRELAS */
-const starsContainer = document.querySelector(".stars");
-
 function createStars() {
-  for (let i = 0; i < 80; i++) {
+  for (let i = 0; i < 120; i++) {
     const star = document.createElement("div");
     star.classList.add("star");
 
     star.style.left = Math.random() * 100 + "vw";
+    star.style.top = Math.random() * 100 + "vh";
 
-    // ⭐ camada de profundidade
-    let size = Math.random();
+    // tamanho variável
+    let size = Math.random() * 3 + 1;
+    star.style.width = size + "px";
+    star.style.height = size + "px";
 
-    if (size < 0.4) {
-      star.classList.add("near");   // perto (maior)
-    } else if (size < 0.8) {
-      star.classList.add("mid");    // meio
-    } else {
-      star.classList.add("far");    // longe (menor)
-    }
+    // profundidade (opacidade diferente)
+    star.style.opacity = Math.random();
 
+    // velocidade variada
     star.style.animationDuration = (3 + Math.random() * 5) + "s";
 
     starsContainer.appendChild(star);
