@@ -118,12 +118,8 @@ window.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("musicBtn");
   const progressBar = document.getElementById("progressBar");
 
+  // PLAY / PAUSE
   window.toggleMusic = function(){
-
-    if(!music || !btn) {
-      console.log("elementos não encontrados");
-      return;
-    }
 
     if(music.paused){
       music.play();
@@ -135,4 +131,15 @@ window.addEventListener("DOMContentLoaded", () => {
 
   };
 
+  // BARRA
+  music.addEventListener("timeupdate", () => {
+    if (!music.duration) return;
+    progressBar.value = music.currentTime;
+  });
+
+  progressBar.addEventListener("input", () => {
+    music.currentTime = progressBar.value;
+  });
+
 });
+
