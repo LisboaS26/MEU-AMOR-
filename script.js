@@ -1,3 +1,5 @@
+console.log("JS carregou");
+
 console.log("btn:", document.getElementById("musicBtn"));
 console.log("music:", document.getElementById("ourMusic"));
 
