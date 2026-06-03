@@ -112,18 +112,27 @@ function createStars() {
   }
 }
   
-window.addEventListener("load", () => {
-  createStars();
-});
+window.addEventListener("DOMContentLoaded", () => {
 
-music.addEventListener("loadedmetadata", () => {
-  progressBar.max = music.duration;
-});
+  const music = document.getElementById("ourMusic");
+  const btn = document.getElementById("musicBtn");
+  const progressBar = document.getElementById("progressBar");
 
-music.addEventListener("timeupdate", () => {
-  progressBar.value = music.currentTime;
-});
+  window.toggleMusic = function(){
 
-progressBar.addEventListener("input", () => {
-  music.currentTime = progressBar.value;
+    if(!music || !btn) {
+      console.log("elementos não encontrados");
+      return;
+    }
+
+    if(music.paused){
+      music.play();
+      btn.innerHTML = "⏸ pausar música";
+    } else {
+      music.pause();
+      btn.innerHTML = "▶ tocar música";
+    }
+
+  };
+
 });
