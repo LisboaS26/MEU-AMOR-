@@ -1,5 +1,7 @@
 console.log("JS carregou");
 
+createStars();
+
 console.log("btn:", document.getElementById("musicBtn"));
 console.log("music:", document.getElementById("ourMusic"));
 
