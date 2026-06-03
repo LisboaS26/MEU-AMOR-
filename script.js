@@ -114,13 +114,16 @@ window.addEventListener("load", () => {
   createStars();
 });
 
+music.addEventListener("loadedmetadata", () => {
+  progressBar.max = music.duration;
+});
+
 music.addEventListener("timeupdate", () => {
   if (!music.duration) return;
 
-  let percent = (music.currentTime / music.duration) * 100;
-  progressBar.value = percent;
+  progressBar.value = music.currentTime;
 });
 
 progressBar.addEventListener("input", () => {
-  music.currentTime = (progressBar.value / 100) * music.duration;
+  music.currentTime = progressBar.value;
 });
