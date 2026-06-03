@@ -263,3 +263,10 @@ button:hover{
 
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
+
+#progressBar{
+  width:100%;
+  margin-top:10px;
+  accent-color:#ff2e63;
+  cursor:pointer;
+}
