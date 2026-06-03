@@ -119,8 +119,6 @@ music.addEventListener("loadedmetadata", () => {
 });
 
 music.addEventListener("timeupdate", () => {
-  if (!music.duration) return;
-
   progressBar.value = music.currentTime;
 });
 
