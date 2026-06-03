@@ -78,9 +78,6 @@ const btn = document.getElementById("musicBtn");
 
 function toggleMusic(){
 
-  const music = document.getElementById("ourMusic");
-  const btn = document.getElementById("musicBtn");
-
   if(!music || !btn) return;
 
   if(music.paused){
