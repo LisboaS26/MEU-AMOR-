@@ -107,3 +107,6 @@ function createStars() {
   }
 }
   
+window.addEventListener("load", () => {
+  createStars();
+});
