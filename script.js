@@ -87,6 +87,11 @@ function toggleMusic(){
 
 /* ⭐ ESTRELAS */
 function createStars() {
+
+  const starsContainer = document.querySelector(".stars");
+
+  if (!starsContainer) return;
+
   for (let i = 0; i < 120; i++) {
     const star = document.createElement("div");
     star.classList.add("star");
@@ -94,15 +99,10 @@ function createStars() {
     star.style.left = Math.random() * 100 + "vw";
     star.style.top = Math.random() * 100 + "vh";
 
-    // tamanho variável
-    let size = Math.random() * 3 + 1;
-    star.style.width = size + "px";
-    star.style.height = size + "px";
+    star.style.width = (Math.random() * 3 + 1) + "px";
+    star.style.height = star.style.width;
 
-    // profundidade (opacidade diferente)
     star.style.opacity = Math.random();
-
-    // velocidade variada
     star.style.animationDuration = (3 + Math.random() * 5) + "s";
 
     starsContainer.appendChild(star);
