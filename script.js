@@ -86,6 +86,7 @@ function toggleMusic(){
 
 }
 
+
 /* ⭐ ESTRELAS */
 function createStars() {
 
