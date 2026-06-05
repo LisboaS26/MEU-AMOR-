@@ -256,3 +256,26 @@ function animateEqualizer(){
   });
 
 }
+
+function createShootingStar(){
+
+  const star = document.createElement("div");
+  star.classList.add("shooting-star");
+
+  document.body.appendChild(star);
+
+  const startY = Math.random() * window.innerHeight;
+
+  star.style.top = startY + "px";
+  star.style.left = "-50px";
+
+  setTimeout(() => {
+    star.remove();
+  }, 1200);
+}
+
+setInterval(() => {
+  if(Math.random() < 0.35){
+    createShootingStar();
+  }
+}, 2500);
