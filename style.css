@@ -319,3 +319,54 @@ button:hover{
   }
 
 }
+
+.music-progress{
+  width:100%;
+
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  margin-top:15px;
+}
+
+.music-progress span{
+  font-size:13px;
+  color:rgba(255,255,255,0.7);
+
+  min-width:38px;
+}
+
+#progressBar{
+  flex:1;
+
+  height:6px;
+
+  appearance:none;
+  -webkit-appearance:none;
+
+  border-radius:999px;
+
+  background:rgba(255,255,255,0.15);
+
+  overflow:hidden;
+
+  cursor:pointer;
+}
+
+#progressBar::-webkit-slider-thumb{
+  -webkit-appearance:none;
+
+  width:14px;
+  height:14px;
+
+  border-radius:50%;
+
+  background:#ff4d88;
+
+  box-shadow:
+    0 0 10px rgba(255, 0, 80, 0.8),
+    0 0 20px rgba(255, 0, 80, 0.4);
+
+  cursor:pointer;
+}
