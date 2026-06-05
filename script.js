@@ -125,6 +125,26 @@ if(!equalizerStarted){
   animateEqualizer();
 
   equalizerStarted = true;
+
+  function animatePulse(){
+
+  requestAnimationFrame(animatePulse);
+
+  analyser.getByteFrequencyData(dataArray);
+
+  // pega o grave (primeiras frequências)
+  let bass = dataArray[2] + dataArray[5] + dataArray[8];
+
+  if(bass > 180){
+
+    musicCard.classList.add("pulse");
+
+    setTimeout(() => {
+      musicCard.classList.remove("pulse");
+    }, 600);
+
+  }
+}
 }
   }
 }
@@ -280,3 +300,6 @@ setInterval(() => {
     createShootingStar();
   }
 }, 2500);
+
+animateEqualizer();
+animatePulse();
