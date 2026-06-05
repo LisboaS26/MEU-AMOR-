@@ -55,7 +55,7 @@ function updateCounter(){
 setInterval(updateCounter, 1000);
 updateCounter();
 
-/* ❌ REMOVIDO DUPLICADOS playPlaylist / playOurSong (não usados) */
+
 
 /* 🎵 TOGGLE ÚNICO E CORRETO */
 function toggleMusic(){
@@ -65,9 +65,18 @@ function toggleMusic(){
   if(music.paused){
     music.play();
     btn.innerHTML = "⏸ pausar música";
+
+    if(equalizer){
+      equalizer.style.opacity = "1";
+    }
+
   } else {
     music.pause();
     btn.innerHTML = "▶ tocar música";
+
+    if(equalizer){
+      equalizer.style.opacity = "0.3";
+    }
   }
 
 }
