@@ -63,22 +63,24 @@ function toggleMusic(){
   if(!music || !btn) return;
 
   if(music.paused){
+
+    audioCtx.resume(); // MUITO IMPORTANTE (Chrome bloqueia áudio)
+
     music.play();
     btn.innerHTML = "⏸ pausar música";
 
-    if(equalizer){
-      equalizer.style.opacity = "1";
-    }
+    equalizer.style.opacity = "1";
+
+    animateEqualizer(); // começa visualizer
 
   } else {
+
     music.pause();
     btn.innerHTML = "▶ tocar música";
 
-    if(equalizer){
-      equalizer.style.opacity = "0.3";
-    }
-  }
+    equalizer.style.opacity = "0";
 
+  }
 }
 
 /* ⭐ ESTRELAS */
@@ -205,3 +207,21 @@ analyser.connect(audioCtx.destination);
 
 const dataArray = new Uint8Array(analyser.frequencyBinCount);
 const bars = equalizer.querySelectorAll("span");
+
+function animateEqualizer(){
+
+  requestAnimationFrame(animateEqualizer);
+
+  analyser.getByteFrequencyData(dataArray);
+
+  bars.forEach((bar, index) => {
+
+    let value = dataArray[index] || 0;
+
+    let height = (value / 255) * 20;
+
+    bar.style.height = `${height}px`;
+
+  });
+
+}
