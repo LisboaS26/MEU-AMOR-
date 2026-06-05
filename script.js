@@ -172,6 +172,28 @@ if(!equalizerStarted){
   }
 }
 
+function createParticles(x, y) {
+
+  for (let i = 0; i < 12; i++) {
+
+    const particle = document.createElement("div");
+    particle.classList.add("particle");
+
+    particle.style.left = x + "px";
+    particle.style.top = y + "px";
+
+    particle.style.setProperty("--x", Math.random());
+    particle.style.setProperty("--y", Math.random());
+
+    document.body.appendChild(particle);
+
+    setTimeout(() => {
+      particle.remove();
+    }, 1000);
+
+  }
+}
+
 /* ⭐ ESTRELAS */
 function createStars() {
 
@@ -343,8 +365,17 @@ function openEnvelope() {
   overlay.classList.toggle("active");
 
   if(env.classList.contains("open")){
+
     sound.currentTime = 0;
     sound.play();
-  }
 
+    // posição do envelope na tela
+    const rect = env.getBoundingClientRect();
+
+    createParticles(
+      rect.left + rect.width / 2,
+      rect.top + rect.height / 2
+    );
+
+  }
 }
