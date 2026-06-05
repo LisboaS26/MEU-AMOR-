@@ -143,6 +143,29 @@ if(!equalizerStarted){
       musicCard.classList.remove("pulse");
     }, 600);
 
+    function animateBackgroundPulse(){
+
+  requestAnimationFrame(animateBackgroundPulse);
+
+  analyser.getByteFrequencyData(dataArray);
+
+  let sum = 0;
+
+  for(let i = 0; i < dataArray.length; i++){
+    sum += dataArray[i];
+  }
+
+  let avg = sum / dataArray.length;
+
+  // intensidade do efeito (ajuste aqui)
+  let intensity = avg / 255;
+
+  const phone = document.querySelector(".phone");
+
+  phone.style.filter = `brightness(${1 + intensity * 0.15}) saturate(${1 + intensity * 0.2})`;
+
+}
+
   }
 }
 }
@@ -303,3 +326,4 @@ setInterval(() => {
 
 animateEqualizer();
 animatePulse();
+animateBackgroundPulse();
