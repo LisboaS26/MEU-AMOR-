@@ -44,6 +44,15 @@ body{
     0 0 12px #ff2e63;
 
   animation:floatUp linear infinite;
+
+  transition:
+  transform 0.3s,
+  opacity 0.3s,
+  box-shadow 0.3s;
+
+  box-shadow:
+  0 0 8px rgba(255, 0, 80, 0.6),
+  0 0 15px rgba(255, 0, 80, 0.3);
 }
 
 @keyframes floatUp{
