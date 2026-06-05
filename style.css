@@ -486,3 +486,7 @@ button:hover{
 .pulse {
   animation: pulseBeat 0.6s ease-in-out;
 }
+
+.phone {
+  transition: background 0.2s ease, filter 0.2s ease;
+}
