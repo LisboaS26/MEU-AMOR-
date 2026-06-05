@@ -405,8 +405,8 @@ object-position:center;
   }
 
   50%{
-    transform:scale(1.08);
-  }
+  transform:scale(1.02);
+}
 
   100%{
     transform:scale(1);
