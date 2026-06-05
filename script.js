@@ -172,6 +172,42 @@ if(!equalizerStarted){
   }
 }
 
+function fadeMusicOut() {
+
+  let volume = music.volume;
+
+  const fade = setInterval(() => {
+
+    if (volume > 0.05) {
+      volume -= 0.05;
+      music.volume = volume;
+    } else {
+      music.volume = 0.05;
+      clearInterval(fade);
+    }
+
+  }, 100);
+
+}
+
+function fadeMusicIn() {
+
+  let volume = music.volume;
+
+  const fade = setInterval(() => {
+
+    if (volume < 1) {
+      volume += 0.05;
+      music.volume = volume;
+    } else {
+      music.volume = 1;
+      clearInterval(fade);
+    }
+
+  }, 100);
+
+}
+
 function createParticles(x, y) {
 
   for (let i = 0; i < 12; i++) {
@@ -369,7 +405,8 @@ function openEnvelope() {
     sound.currentTime = 0;
     sound.play();
 
-    // posição do envelope na tela
+    fadeMusicOut(); // 💓 música abaixa
+
     const rect = env.getBoundingClientRect();
 
     createParticles(
@@ -377,5 +414,9 @@ function openEnvelope() {
       rect.top + rect.height / 2
     );
 
+  } else {
+    fadeMusicIn(); // 🔊 volta volume
   }
 }
+
+  
