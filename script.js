@@ -332,3 +332,8 @@ function openLetter() {
   const card = document.getElementById("letterCard");
   card.classList.toggle("open");
 }
+
+function openEnvelope() {
+  const env = document.getElementById("envelope");
+  env.classList.toggle("open");
+}
