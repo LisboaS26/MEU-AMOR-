@@ -108,6 +108,8 @@ body{
     0 0 120px rgba(255, 0, 80, 0.12);
 
   transition:0.4s;
+
+  animation:photoGlow 3s ease-in-out infinite;
 }
 
 /* TEXTOS */
