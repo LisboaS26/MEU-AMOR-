@@ -192,3 +192,16 @@ window.addEventListener("scroll", () => {
   });
 
 });
+
+const equalizer = document.getElementById("equalizer");
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const analyser = audioCtx.createAnalyser();
+
+analyser.fftSize = 64;
+
+const source = audioCtx.createMediaElementSource(music);
+source.connect(analyser);
+analyser.connect(audioCtx.destination);
+
+const dataArray = new Uint8Array(analyser.frequencyBinCount);
+const bars = equalizer.querySelectorAll("span");
