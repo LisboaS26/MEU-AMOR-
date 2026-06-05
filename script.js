@@ -3,9 +3,7 @@ console.log("JS carregou");
 console.log("SCRIPT CARREGOU");
 
 console.log("script carregou");
-window.toggleMusic = function(){
-  console.log("toggle funcionando");
-};
+
 
 console.log("btn:", document.getElementById("musicBtn"));
 console.log("music:", document.getElementById("ourMusic"));
