@@ -132,14 +132,38 @@ window.addEventListener("DOMContentLoaded", () => {
   };
 
   // BARRA
-  music.addEventListener("timeupdate", () => {
-    if (!music.duration) return;
-    progressBar.value = music.currentTime;
-  });
+ const currentTimeEl = document.getElementById("currentTime");
+const durationEl = document.getElementById("duration");
 
-  progressBar.addEventListener("input", () => {
-    music.currentTime = progressBar.value;
-  });
+function formatTime(seconds){
+
+  const mins = Math.floor(seconds / 60);
+  const secs = Math.floor(seconds % 60);
+
+  return `${mins}:${secs < 10 ? "0" : ""}${secs}`;
+}
+
+music.addEventListener("loadedmetadata", () => {
+
+  progressBar.max = music.duration;
+
+  durationEl.innerHTML = formatTime(music.duration);
+
+});
+
+music.addEventListener("timeupdate", () => {
+
+  progressBar.value = music.currentTime;
+
+  currentTimeEl.innerHTML = formatTime(music.currentTime);
+
+});
+
+progressBar.addEventListener("input", () => {
+
+  music.currentTime = progressBar.value;
+
+});
 
 });
 
