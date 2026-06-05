@@ -107,6 +107,24 @@ function toggleMusic(){
 
     equalizer.style.opacity = "0";
 
+if(!equalizerStarted){
+
+  audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  analyser = audioCtx.createAnalyser();
+
+  analyser.fftSize = 64;
+
+  source = audioCtx.createMediaElementSource(music);
+  source.connect(analyser);
+  analyser.connect(audioCtx.destination);
+
+  dataArray = new Uint8Array(analyser.frequencyBinCount);
+  bars = equalizer.querySelectorAll("span");
+
+  animateEqualizer();
+
+  equalizerStarted = true;
+}
   }
 }
 
@@ -222,16 +240,6 @@ window.addEventListener("scroll", () => {
 
 });
 
-
-analyser.fftSize = 64;
-
-const source = audioCtx.createMediaElementSource(music);
-source.connect(analyser);
-analyser.connect(audioCtx.destination);
-
-const dataArray = new Uint8Array(analyser.frequencyBinCount);
-const bars = equalizer.querySelectorAll("span");
-
 function animateEqualizer(){
 
   requestAnimationFrame(animateEqualizer);
@@ -241,7 +249,6 @@ function animateEqualizer(){
   bars.forEach((bar, index) => {
 
     let value = dataArray[index] || 0;
-
     let height = (value / 255) * 20;
 
     bar.style.height = `${height}px`;
