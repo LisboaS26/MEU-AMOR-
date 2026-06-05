@@ -587,3 +587,28 @@ button:hover{
 .dark-overlay.active {
   background: rgba(0, 0, 0, 0.65);
 }
+
+.particle {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  background: #ff2e63;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+  animation: floatParticle 1s ease-out forwards;
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(
+      calc(-50px + 100px * var(--x)),
+      calc(-80px + 160px * var(--y))
+    ) scale(0);
+    opacity: 0;
+  }
+}
