@@ -98,7 +98,15 @@
   ▶ tocar música
 </button>
 
-<input type="range" id="progressBar" value="0" min="0">
+<div class="music-progress">
+
+  <span id="currentTime">0:00</span>
+
+  <input type="range" id="progressBar" value="0" min="0">
+
+  <span id="duration">0:00</span>
+
+</div>
         
 <audio id="ourMusic" src="musica.mp3"></audio>
 
