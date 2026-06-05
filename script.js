@@ -25,6 +25,7 @@ function closePopup(){
 
 /* ⭐ DATA DO RELACIONAMENTO */
 
+const equalizer = document.getElementById("equalizer");
 const music = document.getElementById("ourMusic");
 const btn = document.getElementById("musicBtn");
 const progressBar = document.getElementById("progressBar");
