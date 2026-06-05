@@ -33,6 +33,7 @@ function closePopup(){
 
 /* ⭐ DATA DO RELACIONAMENTO */
 
+const musicCard = document.querySelector(".playlist .song-card");
 const equalizer = document.getElementById("equalizer");
 const music = document.getElementById("ourMusic");
 const btn = document.getElementById("musicBtn");
