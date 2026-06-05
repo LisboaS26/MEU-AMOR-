@@ -7,6 +7,14 @@ console.log("script carregou");
 console.log("btn:", document.getElementById("musicBtn"));
 console.log("music:", document.getElementById("ourMusic"));
 
+let audioCtx;
+let analyser;
+let source;
+let equalizerStarted = false;
+
+let dataArray;
+let bars;
+
 function scrollToPlaylist(){
   window.scrollTo({
     top: window.innerHeight,
@@ -196,9 +204,6 @@ window.addEventListener("scroll", () => {
 
 });
 
-const equalizer = document.getElementById("equalizer");
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-const analyser = audioCtx.createAnalyser();
 
 analyser.fftSize = 64;
 
