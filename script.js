@@ -135,7 +135,7 @@ if(!equalizerStarted){
   // pega o grave (primeiras frequências)
   let bass = dataArray[2] + dataArray[5] + dataArray[8];
 
-  if(bass > 80){
+  if(bass > 70){
 
     musicCard.classList.add("pulse");
 
