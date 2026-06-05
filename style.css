@@ -255,12 +255,27 @@ button:hover{
 }
 
 .slider-track img{
+
   width:250px;
   height:180px;
+
   object-fit:cover;
+
   margin-right:12px;
+
   border-radius:18px;
+
   flex-shrink:0;
+
+  box-shadow:
+    0 0 18px rgba(255, 0, 80, 0.12),
+    0 8px 25px rgba(0,0,0,0.35);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    filter 0.4s ease;
+
 }
 
 @keyframes scrollPhotos{
@@ -380,3 +395,14 @@ button:hover{
   cursor:pointer;
 }
 
+.slider-track img:hover{
+
+  transform:scale(1.04);
+
+  filter:brightness(1.08);
+
+  box-shadow:
+    0 0 30px rgba(255, 0, 80, 0.35),
+    0 10px 35px rgba(0,0,0,0.45);
+
+}
