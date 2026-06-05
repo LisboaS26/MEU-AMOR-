@@ -576,17 +576,14 @@ button:hover{
 }
 
 .dark-overlay {
-  position: absolute;
+  position: fixed;
   inset: 0;
-  width: 100%;
-  height: 100%;
   background: rgba(0, 0, 0, 0);
   transition: 0.6s ease;
   pointer-events: none;
-  z-index: 999; /* sobe acima de tudo */
+  z-index: 999;
 }
 
-/* quando ativa */
 .dark-overlay.active {
   background: rgba(0, 0, 0, 0.65);
 }
