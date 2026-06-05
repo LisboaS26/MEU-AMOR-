@@ -170,3 +170,39 @@ progressBar.addEventListener("input", () => {
 window.addEventListener("load", () => {
   createStars();
 });
+
+setInterval(() => {
+
+  const stars = document.querySelectorAll(".star");
+
+  stars.forEach(star => {
+
+    if(!music.paused){
+
+      const scale = 1 + Math.random() * 1.5;
+
+      star.style.transform = `scale(${scale})`;
+
+      star.style.opacity = 0.6 + Math.random();
+
+      star.style.boxShadow = `
+        0 0 12px rgba(255, 0, 80, 0.9),
+        0 0 25px rgba(255, 0, 80, 0.5)
+      `;
+
+    } else {
+
+      star.style.transform = "scale(1)";
+
+      star.style.opacity = 0.7;
+
+      star.style.boxShadow = `
+        0 0 8px rgba(255, 0, 80, 0.6),
+        0 0 15px rgba(255, 0, 80, 0.3)
+      `;
+
+    }
+
+  });
+
+}, 350);
