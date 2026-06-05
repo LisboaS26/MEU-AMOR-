@@ -490,3 +490,39 @@ button:hover{
 .phone {
   transition: background 0.2s ease, filter 0.2s ease;
 }
+
+.card-letter {
+  width: 100%;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  cursor: pointer;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+
+.letter-front,
+.letter-back {
+  transition: 0.5s ease;
+}
+
+.letter-back {
+  opacity: 0;
+  transform: translateY(10px);
+  max-height: 0;
+  overflow: hidden;
+}
+
+/* quando abrir */
+.card-letter.open .letter-front {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.card-letter.open .letter-back {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 300px;
+}
