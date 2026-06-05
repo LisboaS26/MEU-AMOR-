@@ -4,7 +4,6 @@ console.log("SCRIPT CARREGOU");
 
 console.log("script carregou");
 
-
 console.log("btn:", document.getElementById("musicBtn"));
 console.log("music:", document.getElementById("ourMusic"));
 
@@ -24,7 +23,7 @@ function closePopup(){
   document.getElementById("popup").style.display = "none";
 }
 
-/* DATA DO RELACIONAMENTO */
+/* ⭐ DATA DO RELACIONAMENTO */
 
 const music = document.getElementById("ourMusic");
 const btn = document.getElementById("musicBtn");
@@ -39,11 +38,8 @@ function updateCounter(){
   let diff = now - startDate;
 
   const seconds = Math.floor(diff / 1000) % 60;
-
   const minutes = Math.floor(diff / (1000 * 60)) % 60;
-
   const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
-
   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
 
   document.getElementById("timeTogether").innerHTML =
@@ -56,21 +52,11 @@ function updateCounter(){
 }
 
 setInterval(updateCounter, 1000);
-
 updateCounter();
 
+/* ❌ REMOVIDO DUPLICADOS playPlaylist / playOurSong (não usados) */
 
-function playPlaylist(){
-  ourSongAudio.pause();
-  playlistAudio.play();
-}
-
-function playOurSong(){
-  playlistAudio.pause();
-  ourSongAudio.play();
-}
-
-
+/* 🎵 TOGGLE ÚNICO E CORRETO */
 function toggleMusic(){
 
   if(!music || !btn) return;
@@ -84,7 +70,6 @@ function toggleMusic(){
   }
 
 }
-
 
 /* ⭐ ESTRELAS */
 function createStars() {
@@ -109,59 +94,35 @@ function createStars() {
     starsContainer.appendChild(star);
   }
 }
-  
+
 window.addEventListener("DOMContentLoaded", () => {
 
   const music = document.getElementById("ourMusic");
   const btn = document.getElementById("musicBtn");
   const progressBar = document.getElementById("progressBar");
 
-  // PLAY / PAUSE
-  window.toggleMusic = function(){
+  const currentTimeEl = document.getElementById("currentTime");
+  const durationEl = document.getElementById("duration");
 
-    if(music.paused){
-      music.play();
-      btn.innerHTML = "⏸ pausar música";
-    } else {
-      music.pause();
-      btn.innerHTML = "▶ tocar música";
-    }
+  function formatTime(seconds){
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins}:${secs < 10 ? "0" : ""}${secs}`;
+  }
 
-  };
+  music.addEventListener("loadedmetadata", () => {
+    progressBar.max = music.duration;
+    durationEl.innerHTML = formatTime(music.duration);
+  });
 
-  // BARRA
- const currentTimeEl = document.getElementById("currentTime");
-const durationEl = document.getElementById("duration");
+  music.addEventListener("timeupdate", () => {
+    progressBar.value = music.currentTime;
+    currentTimeEl.innerHTML = formatTime(music.currentTime);
+  });
 
-function formatTime(seconds){
-
-  const mins = Math.floor(seconds / 60);
-  const secs = Math.floor(seconds % 60);
-
-  return `${mins}:${secs < 10 ? "0" : ""}${secs}`;
-}
-
-music.addEventListener("loadedmetadata", () => {
-
-  progressBar.max = music.duration;
-
-  durationEl.innerHTML = formatTime(music.duration);
-
-});
-
-music.addEventListener("timeupdate", () => {
-
-  progressBar.value = music.currentTime;
-
-  currentTimeEl.innerHTML = formatTime(music.currentTime);
-
-});
-
-progressBar.addEventListener("input", () => {
-
-  music.currentTime = progressBar.value;
-
-});
+  progressBar.addEventListener("input", () => {
+    music.currentTime = progressBar.value;
+  });
 
 });
 
@@ -191,7 +152,6 @@ setInterval(() => {
     } else {
 
       star.style.transform = "scale(1)";
-
       star.style.opacity = 0.7;
 
       star.style.boxShadow = `
