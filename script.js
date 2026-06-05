@@ -327,3 +327,8 @@ setInterval(() => {
 animateEqualizer();
 animatePulse();
 animateBackgroundPulse();
+
+function openLetter() {
+  const card = document.getElementById("letterCard");
+  card.classList.toggle("open");
+}
