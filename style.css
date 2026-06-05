@@ -95,11 +95,19 @@ body{
 }
 
 .main-photo{
-  width:100%;
+  width:220px;
   height:220px;
   object-fit:cover;
-  border-radius:20px;
-  margin-bottom:25px;
+  border-radius:50%;
+
+  border:3px solid rgba(255,255,255,0.15);
+
+  box-shadow:
+    0 0 25px rgba(255, 0, 80, 0.45),
+    0 0 60px rgba(255, 0, 80, 0.25),
+    0 0 120px rgba(255, 0, 80, 0.12);
+
+  transition:0.4s;
 }
 
 /* TEXTOS */
