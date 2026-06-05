@@ -411,11 +411,9 @@ button:hover{
   display: flex;
   align-items: flex-end;
   gap: 3px;
-
   height: 18px;
   margin-top: 10px;
-
-  opacity: 0.3;
+  opacity: 0;
   transition: 0.3s ease;
 }
 
@@ -424,8 +422,7 @@ button:hover{
   height: 4px;
   background: #ff2e63;
   border-radius: 2px;
-
-  animation: eq 0.9s infinite ease-in-out;
+  transition: height 0.1s linear;
 }
 
 .equalizer span:nth-child(1) { animation-delay: 0s; }
