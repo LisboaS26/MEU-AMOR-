@@ -262,7 +262,7 @@ function createShootingStar(){
   const star = document.createElement("div");
   star.classList.add("shooting-star");
 
-  document.body.appendChild(star);
+  document.querySelector(".phone").appendChild(star);
 
   const startY = Math.random() * window.innerHeight;
 
