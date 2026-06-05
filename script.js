@@ -334,6 +334,16 @@ function openLetter() {
 }
 
 function openEnvelope() {
+
   const env = document.getElementById("envelope");
+  const sound = document.getElementById("paperSound");
+
   env.classList.toggle("open");
+
+  // toca som quando abre
+  if(env.classList.contains("open")){
+    sound.currentTime = 0;
+    sound.play();
+  }
+
 }
