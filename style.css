@@ -562,9 +562,13 @@ button:hover{
   left: 0;
   width: 100%;
   padding: 20px;
+
   transition: 0.8s ease;
   opacity: 0;
   color: white;
+
+  max-height: 120px;
+  overflow-y: auto;
 }
 
 /* estado aberto */
@@ -573,7 +577,7 @@ button:hover{
 }
 
 .envelope.open .letter-paper {
-  bottom: 10px;
+  bottom: 0;
   opacity: 1;
 }
 
