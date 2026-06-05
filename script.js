@@ -206,3 +206,21 @@ setInterval(() => {
   });
 
 }, 350);
+
+window.addEventListener("scroll", () => {
+
+  const stars = document.querySelectorAll(".star");
+
+  const scrollY = window.scrollY;
+
+  stars.forEach((star, index) => {
+
+    const speed = (index % 5 + 1) * 0.15;
+
+    star.style.transform = `
+      translateY(${scrollY * speed * 0.08}px)
+    `;
+
+  });
+
+});
