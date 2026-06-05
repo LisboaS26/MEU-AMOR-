@@ -618,3 +618,7 @@ button:hover{
     opacity: 0;
   }
 }
+
+.letter-paper::-webkit-scrollbar {
+  width: 0px;
+}
