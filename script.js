@@ -64,14 +64,15 @@ function toggleMusic(){
 
   if(music.paused){
 
-    audioCtx.resume(); // MUITO IMPORTANTE (Chrome bloqueia áudio)
+    if (audioCtx.state === "suspended") {
+      audioCtx.resume();
+    }
 
     music.play();
     btn.innerHTML = "⏸ pausar música";
 
     equalizer.style.opacity = "1";
-
-    animateEqualizer(); // começa visualizer
+    animateEqualizer();
 
   } else {
 
