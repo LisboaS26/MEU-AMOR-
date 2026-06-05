@@ -72,15 +72,33 @@ function toggleMusic(){
 
   if(music.paused){
 
-    if (audioCtx.state === "suspended") {
-      audioCtx.resume();
-    }
-
     music.play();
     btn.innerHTML = "⏸ pausar música";
 
     equalizer.style.opacity = "1";
-    animateEqualizer();
+
+    // cria audio só 1 vez
+    if(!equalizerStarted){
+
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      analyser = audioCtx.createAnalyser();
+      analyser.fftSize = 64;
+
+      source = audioCtx.createMediaElementSource(music);
+      source.connect(analyser);
+      analyser.connect(audioCtx.destination);
+
+      dataArray = new Uint8Array(analyser.frequencyBinCount);
+      bars = equalizer.querySelectorAll("span");
+
+      animateEqualizer();
+
+      equalizerStarted = true;
+    }
+
+    if (audioCtx.state === "suspended") {
+      audioCtx.resume();
+    }
 
   } else {
 
