@@ -158,9 +158,9 @@ button:hover{
 .song-card{
   width:100%;
 
-  background:rgba(255,255,255,0.06);
+  background:rgba(255,255,255,0.12);
 
-  border:1px solid rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.22);
 
   backdrop-filter:blur(14px);
   -webkit-backdrop-filter:blur(14px);
