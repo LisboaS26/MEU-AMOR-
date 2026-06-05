@@ -537,6 +537,8 @@ button:hover{
   cursor: pointer;
   overflow: hidden;
   transition: 0.5s;
+
+   z-index: 1001;
 }
 
 /* tampa do envelope */
