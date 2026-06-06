@@ -700,6 +700,8 @@ section {
   justify-content:center;
   align-items:center;
 
+  pointer-events: all;
+
   z-index:99999;
 
   transition:
