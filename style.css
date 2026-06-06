@@ -567,7 +567,9 @@ button:hover{
   width: 100%;
   padding: 20px;
 
-  transition: 0.8s ease;
+  transition:
+  bottom 0.9s cubic-bezier(0.25, 0.8, 0.25, 1),
+  opacity 0.9s ease;
   opacity: 0;
   color: white;
 
@@ -576,6 +578,13 @@ button:hover{
 
   line-height:1.7;
   font-size:0.95rem;
+
+  background: rgba(255,255,255,0.04);
+backdrop-filter: blur(6px);
+border-radius: 12px;
+
+  box-shadow:
+  0 4px 20px rgba(0,0,0,0.18);
 }
 
 /* estado aberto */
@@ -586,6 +595,12 @@ button:hover{
 .envelope.open .letter-paper {
   bottom: 0;
   opacity: 1;
+}
+
+.envelope.open {
+  box-shadow:
+    0 0 25px rgba(255,255,255,0.06),
+    0 0 40px rgba(255, 0, 80, 0.12);
 }
 
 .dark-overlay {
