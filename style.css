@@ -951,3 +951,11 @@ z-index:2;
   }
 
 }
+
+.hero,
+.counter,
+.playlist,
+.letter {
+  position: relative;
+  z-index: 3;
+}
