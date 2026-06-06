@@ -420,15 +420,15 @@ function openEnvelope() {
   }
 }
 
-window.addEventListener("DOMContentLoaded", () => {
+window.onload = function(){
 
   const introScreen =
     document.getElementById("introScreen");
 
-  introScreen.addEventListener("click", () => {
+  introScreen.onclick = function(){
 
     introScreen.classList.add("hide");
 
-  });
+  };
 
-});
+};
