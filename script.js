@@ -420,15 +420,4 @@ function openEnvelope() {
   }
 }
 
-window.onload = function(){
 
-  const introScreen =
-    document.getElementById("introScreen");
-
-  introScreen.onclick = function(){
-
-    introScreen.classList.add("hide");
-
-  };
-
-};
