@@ -752,7 +752,7 @@ border-radius: 12px;
 }
 
 .dark-overlay {
-  position: absolute;
+  position: fixed;
   inset: 0;
 
   /* base cinematográfica */
