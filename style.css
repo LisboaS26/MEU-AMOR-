@@ -873,7 +873,11 @@ section {
 
 .letter-tip{
 
-  margin-top:18px;
+  margin-top:28px;
+
+  display:block;
+position:relative;
+z-index:2;
 
   text-align:center;
 
