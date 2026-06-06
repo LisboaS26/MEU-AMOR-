@@ -35,7 +35,7 @@ body{
 }
 
 .star{
-  position:absolute;
+  position:fixed;
   width:3px;
   height:3px;
 
