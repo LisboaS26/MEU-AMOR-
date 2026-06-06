@@ -420,10 +420,15 @@ function openEnvelope() {
   }
 }
 
-const introScreen = document.getElementById("introScreen");
+window.addEventListener("DOMContentLoaded", () => {
 
-introScreen.addEventListener("click", () => {
+  const introScreen =
+    document.getElementById("introScreen");
 
-  introScreen.classList.add("hide");
+  introScreen.addEventListener("click", () => {
 
-});  
+    introScreen.classList.add("hide");
+
+  });
+
+});
