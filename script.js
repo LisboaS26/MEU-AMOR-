@@ -354,6 +354,7 @@ function animateEqualizer(){
     let height = (value / 255) * 20;
 
     bar.style.height = `${height}px`;
+    bar.style.opacity = 0.5 + (value / 255);
 
   });
 
