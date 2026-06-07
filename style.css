@@ -95,7 +95,8 @@ background: linear-gradient(
   #050505 100%
 );
 
-background-size: 100% 200%;
+background-size:100% 400%;
+background-position:center top;
   
 
   border-radius:40px;
