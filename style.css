@@ -602,7 +602,7 @@ button:hover::before{
 }
 
 .phone {
-  transition: background 0.2s ease, filter 0.2s ease;
+  transition: background 0.2s ease;
 }
 
 .card-letter {
