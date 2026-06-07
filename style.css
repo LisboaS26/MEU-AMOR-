@@ -951,7 +951,6 @@ z-index:2;
 .playlist,
 .letter {
   position: relative;
-  z-index: 3;
 }
 
 .phone::before,
