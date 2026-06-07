@@ -23,6 +23,8 @@ body{
   color:white;
 
   overflow-x:hidden;
+
+  overflow-y:auto;
 }
 
 /* ⭐ FUNDO DAS ESTRELAS */
@@ -82,7 +84,7 @@ min-height:850px;
 
   position:relative;
 
-  overflow-y:auto;   /* scroll dentro do celular */
+  overflow-y:visible;   /* scroll dentro do celular */
   overflow-x:visible;
 
 
