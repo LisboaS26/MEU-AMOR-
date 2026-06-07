@@ -74,7 +74,9 @@ body{
 /* 📱 PHONE */
 .phone{
   width:390px;
-  height:850px;
+
+  min-height:850px;
+height:auto;
 
   position:relative;
 
