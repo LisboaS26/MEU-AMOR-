@@ -86,12 +86,13 @@ min-height:850px;
   overflow-x:visible;
 
 
- background: linear-gradient(
+background: linear-gradient(
   180deg,
-  #121212 0%,
-  #2a0012 35%,
-  #3a0018 65%,
-  #121212 100%
+  #220012 0%,
+  #2a0015 35%,
+  #300018 65%,
+  #1a000d 85%,
+  #050505 100%
 );
 
 background-attachment: fixed;
