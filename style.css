@@ -79,7 +79,7 @@ body{
   position:relative;
 
   overflow-y:auto;   /* scroll dentro do celular */
-  overflow-x:hidden;
+  overflow-x:visible;
 
 
   background:linear-gradient(
