@@ -82,18 +82,16 @@ body{
   overflow-x:visible;
 
 
-  background:linear-gradient(
-    -45deg,
-    #121212,
-    #2a0012,
-    #45001f,
-    #121212
-  );
+ background: linear-gradient(
+  180deg,
+  #121212 0%,
+  #2a0012 35%,
+  #3a0018 65%,
+  #121212 100%
+);
 
 background-attachment: fixed;
   
-  background-size:400% 400%;
-  animation:bgAnimation 12s ease infinite;
 
   border-radius:40px;
 
