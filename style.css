@@ -95,7 +95,7 @@ background: linear-gradient(
   #050505 100%
 );
 
-background-attachment: fixed;
+background-attachment: local;
   
 
   border-radius:40px;
