@@ -948,3 +948,48 @@ z-index:2;
   position: relative;
   z-index: 3;
 }
+
+.phone::before,
+.phone::after{
+
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  bottom:0;
+
+  width:70px;
+
+  z-index:-1;
+
+  filter:blur(45px);
+
+  opacity:0.55;
+
+  pointer-events:none;
+}
+
+.phone::before{
+
+  left:-35px;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(255,46,99,0.28),
+      transparent
+    );
+}
+
+.phone::after{
+
+  right:-35px;
+
+  background:
+    linear-gradient(
+      to left,
+      rgba(255,46,99,0.28),
+      transparent
+    );
+}
