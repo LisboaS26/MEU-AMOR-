@@ -162,8 +162,7 @@ if(!equalizerStarted){
 
   const phone = document.querySelector(".phone");
 
-  phone.style.filter = `brightness(${1 + intensity * 0.15}) saturate(${1 + intensity * 0.2})`;
-
+ 
 }
 
   }
