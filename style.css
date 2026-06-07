@@ -75,8 +75,8 @@ body{
 .phone{
   width:390px;
 
-  min-height:850px;
-height:auto;
+ height:100vh;
+min-height:850px;
 
   position:relative;
 
