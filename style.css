@@ -246,14 +246,15 @@ button:hover::before{
 }
 
 /* SONG CARD */
-.song-card {
+.song-card{
   width:100%;
 
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(20, 20, 20, 0.55);
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border:1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 
   border-radius:22px;
 
@@ -264,11 +265,10 @@ button:hover::before{
   align-items:center;
 
   box-shadow:
-    0 8px 30px rgba(0,0,0,0.35);
+    0 0 20px rgba(255, 0, 80, 0.06),
+    0 8px 25px rgba(0,0,0,0.30);
 
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-
-  transform: translateZ(0);
+  transition: all 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .song-card:hover {
@@ -639,7 +639,7 @@ button:hover::before{
 .envelope {
   width: 100%;
   height: 160px;
-  background: rgba(255,255,255,0.08);
+  background: rgba(20,20,20,0.50);
   border: 1px solid rgba(255,255,255,0.15);
   border-radius: 15px;
   position: relative;
