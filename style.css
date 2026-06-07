@@ -78,6 +78,8 @@ body{
  height:100vh;
 min-height:850px;
 
+  padding-bottom: 120px;
+
   position:relative;
 
   overflow-y:auto;   /* scroll dentro do celular */
@@ -106,6 +108,7 @@ background-attachment: fixed;
 position: relative;
   z-index: 1;
   transform: perspective(1000px);
+
   
 }
 .phone::-webkit-scrollbar{
